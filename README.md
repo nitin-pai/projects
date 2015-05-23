@@ -1,0 +1,2 @@
+# projects
+Experiments in computing
