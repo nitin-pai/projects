@@ -10,6 +10,8 @@ import java.io.File;
  * 
  */
 public class Runner {
+	
+	private static Logger logger = Logger.getLogger();
 
 	/**
 	 *  * @param args -
@@ -33,12 +35,17 @@ public class Runner {
 	 * @param dir - directory where the files to be processed reside
 	 */
 	public static void processFile(File dir) {
-		for (File file : dir.listFiles()) {
-			if (file.isDirectory()) {
-				continue;
-			} else {
-				new DictionaryApp(file).run();
+		try{
+			for (File file : dir.listFiles()) {
+				if (file.isDirectory()) {
+					continue;
+				} else {
+					new DictionaryApp(file).run();
+				}
 			}
+		}catch(Exception e){
+			logger.debug(e.getMessage());
+			logger.info("Cannot proceed with the directory provided");
 		}
 	}
 
