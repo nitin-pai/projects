@@ -7,6 +7,12 @@ import java.util.Set;
 import com.dictionary.api.MapReduce;
 import com.dictionary.api.Word;
 
+/**
+ * @author nitinpai
+ * 
+ * 			The class needs to be run after adding -ea to VM arguments to enable assertions
+ *
+ */
 public class MapReduceTest {
 	
 	private static MapReduce algorithm = new MapReduce();
