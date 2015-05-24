@@ -3,10 +3,28 @@ package com.dictionary.api;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author nitinpai
+ * 
+ *         Data structure used to store all the words which would be a part of
+ *         the dictionary created by {@link DictionaryApp}
+ */
 public class Word {
 
+	/**
+	 * String value of the token
+	 */
 	private String value;
+
+	/**
+	 * Level assigned for the Word which is a part of a hierarchy in a
+	 * dictionary
+	 */
 	private Integer level = 0;
+
+	/**
+	 * Set of all words which define the key word
+	 */
 	private Set<Word> attributes = new HashSet<Word>();
 
 	@Override
@@ -67,8 +85,8 @@ public class Word {
 	public void incrementLevel() {
 		this.level += 1;
 	}
-	
-	public Boolean hasAttributes(){
+
+	public Boolean hasAttributes() {
 		return attributes.size() != 0;
 	}
 
