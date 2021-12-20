@@ -3,8 +3,6 @@ package com.techtracer.util.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.websocket.server.PathParam;
-
 import com.techtracer.util.data.RecycleStats;
 import com.techtracer.util.data.RecycleStatsRepository;
 
